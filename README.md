@@ -1,12 +1,16 @@
-## Wanhao i3 3D Printer Firmware
+# Wanhao i3 3D Printer Firmware
 
-# Changes
+## Changes
 * Set temp sensor for Trianglelab's Volcano hotend
 * LCD display delays
 * Disable boot screen
 * Invert menu selection
 
-# To Do
+## To Do
 * bltouch
 * linear advance
 * bed skew compensation
+
+# NOTE
+* Remember to install the 'Auto-reset' jumper in order to update the firmware!
+* build using 'sanguiono1284p' not optimized version.
