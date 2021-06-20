@@ -84,10 +84,10 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+//#define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
-#define SHOW_CUSTOM_BOOTSCREEN
+//#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
 //#define CUSTOM_STATUS_SCREEN_IMAGE
@@ -460,7 +460,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 99
+#define TEMP_SENSOR_0 5 // Sensor provided with Trianglelab's Volcano
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -2375,6 +2375,11 @@
 // LCD for Melzi Card with Graphical LCD
 //
 #define LCD_FOR_MELZI
+#if ENABLED(LCD_FOR_MELZI)
+  #define ST7920_DELAY_1 DELAY_NS(0)
+  #define ST7920_DELAY_2 DELAY_NS(100)
+  #define ST7920_DELAY_3 DELAY_NS(250)
+#endif
 
 //
 // Original Ulticontroller from Ultimaker 2 printer with SSD1309 I2C display and encoder
